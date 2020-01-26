@@ -1382,22 +1382,8 @@
     .param p1, "subid"    # I
 
     .line 820
-    const-string v0, "wfc_ims_mdn"
-
-    iget-object v1, p0, Lorg/codeaurora/ims/ImsConfigImpl;->mContext:Landroid/content/Context;
-
-    invoke-virtual {p0, p1, v0, v1}, Lorg/codeaurora/ims/ImsConfigImpl;->getSubscriptionProperty(ILjava/lang/String;Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 822
-    .local v0, "mdn":Ljava/lang/String;
-    if-nez v0, :cond_0
-
     const-string v0, "0"
 
-    .line 823
-    :cond_0
     return-object v0
 .end method
 
